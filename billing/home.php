@@ -107,7 +107,7 @@ endif;
                         <hr>
                         <div class="row">
                             <?php
-                            $prod = $conn->query("SELECT * FROM products where status = 1 order by name asc");
+                            $prod = $conn->query("SELECT * FROM products where status = 1 AND stock_quantity = 0 order by name asc");
                             while($row=$prod->fetch_assoc()):
                             ?>
                             <div class="col-md-2 mb-2">
